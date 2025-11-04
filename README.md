@@ -153,3 +153,45 @@ Once all tests are passing and code is pushed to the `main` branch:
 - Application passes all test suites
 - `/` route is created and returns correctly
 - `/<model>` route is created and returns correctly
+
+# Flask Car Routes Lab
+
+This is a Flask project that demonstrates how to create basic routes.
+
+---
+
+## App Description
+The app simulates a small car company called **Flatiron Cars**.
+
+It includes two routes:
+- `/` — shows a welcome message  
+  → **Welcome to Flatiron Cars**
+- `/<model>` — checks if a car model exists  
+  → Example:  
+  `/Crossroads` → @id51624840 (*Flatiron) Crossroads is in our fleet!*  
+  `/realCar` → *No models called realCar exists in our catalog*
+
+---
+
+## How to Run
+
+```bash
+pipenv install
+pipenv shell
+flask --app server.app run
+```
+Then open your browser at:
+http://127.0.0.1:5000
+
+## How to Test
+```bash
+pytest -q
+```
+Expected output:
+5 passed in 0.60s
+ 
+### Screenshot
+![Flask App Screenshot](screenshot.png)
+
+
+
