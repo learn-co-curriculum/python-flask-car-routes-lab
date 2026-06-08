@@ -17,4 +17,4 @@ def model_route(model):
     if model in existing_models:
         return f"Flatiron {model} is in our fleet!"
     else:
-        return f"No models called {model} exist in our catalog"
+        return f"No models called {model} exists in our catalog."
