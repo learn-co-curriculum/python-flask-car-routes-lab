@@ -13,7 +13,6 @@ def home():
 @app.route("/<model>")
 def get_model(model):
 
-    # normalize input
     model = model.lower()
 
     if model in existing_models:
