@@ -11,7 +11,8 @@ def intro():
 
 @app.route('/<model>')
 def car_model(model):
-    if model in existing_models:
+    formatted_model = model
+    if formatted_model in existing_models:
         return f"Flatiron {model} is in our fleet!"
     else:
         return f"No models called {model} exists in our catalog"
