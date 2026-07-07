@@ -27,3 +27,4 @@ def model_lookup(model):
 # Start the local development server if executed directly
 if __name__ == '__main__':
     app.run(debug=True)
+    
