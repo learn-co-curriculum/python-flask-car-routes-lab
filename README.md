@@ -4,12 +4,11 @@
 
 ## Overview
 
-Now it is time for you to build your own routes!
+A small Flask API for a car company, Flatiron Cars. It exposes:
 
-You are building routes for a car company database. You will need to build:
-
-- A **default route** introducing the company
-- A **model-specific route** for requesting information on a car model
+- `GET /` — a welcome message introducing the company
+- `GET /<model>` — checks a requested model against the company's fleet
+  (`existing_models`) and returns whether or not it's in stock
 
 ---
 
