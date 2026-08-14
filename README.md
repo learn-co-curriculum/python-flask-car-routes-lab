@@ -153,3 +153,18 @@ Once all tests are passing and code is pushed to the `main` branch:
 - Application passes all test suites
 - `/` route is created and returns correctly
 - `/<model>` route is created and returns correctly
+
+---
+
+## Completed Application
+
+The Flask application was successfully implemented with the required `/` and `/<model>` routes.
+
+### Test Results
+
+All five provided tests passed successfully:
+
+```text
+5 passed
+
+![Completed Flask Car Routes Application](screenshots/car-routes.png)
