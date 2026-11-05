@@ -1,155 +1,41 @@
-# Lab: Car Routes Lab
+# Flatiron Cars
 
----
+A small Flask application that introduces Flatiron Cars and looks up car models in its fleet.
 
-## Overview
+## Routes
 
-Now it is time for you to build your own routes!
+| Route | Response |
+| --- | --- |
+| `/` | `Welcome to Flatiron Cars` |
+| `/<model>` | `Flatiron <model> is in our fleet!` when the model is recognized |
+| `/<model>` | `No models called <model> exists in our catalog` when it is not recognized |
 
-You are building routes for a car company database. You will need to build:
+Recognized models are `Beedle`, `Crossroads`, `M2`, and `Panique`.
 
-- A **default route** introducing the company
-- A **model-specific route** for requesting information on a car model
+## Run locally
 
----
+Install the dependencies from the project root:
 
-## Tasks
+```bash
+python3 -m pip install Flask==2.2.2 Werkzeug==2.3.7
+```
 
-### Task 1: Define the Problem
+Start the application:
 
-Build routes for a car company:
+```bash
+python3 server/app.py
+```
 
-- `/` (default route)
-- `/<model>` (route for a specific car model)
+Open [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in a browser. Try a model at [http://127.0.0.1:5000/Beedle](http://127.0.0.1:5000/).
 
----
+## Screenshot
 
-### Task 2: Determine the Design
+![Flatiron Cars home page running locally](docs/car-routes.png)
 
-#### App Routes:
+## Tests
 
-- `GET /`
-- `GET /<model>`
+Run the provided route tests from the project root:
 
----
-
-### Task 3: Develop the Code
-
-- Initialize Flask
-- Set up `/` route
-- Set up `/<model>` route
-
----
-
-### Task 4: Test and Refine
-
-- Debug and test during development using the provided test suite and Flask instance
-
----
-
-### Task 5: Document and Maintain
-
-- Commit as you go, writing meaningful commit messages
-- Push commit history to GitHub periodically and when the lab is complete
-
----
-
-## Tools and Resources
-
-- **GitHub Repo**: [https://github.com/learn-co-curriculum/python-flask-car-routes-lab](https://github.com/learn-co-curriculum/python-flask-car-routes-lab)
-- **Flask Quickstart**: [https://flask.palletsprojects.com/en/stable/quickstart/](https://flask.palletsprojects.com/en/stable/quickstart/)
-
----
-
-## Instructions
-
-### Set Up
-
-Before we begin coding, complete the initial setup:
-
-1. **Fork and Clone**
-   - Go to the GitHub repository link.
-   - Fork the repository to your GitHub account.
-   - Clone the forked repository to your local machine.
-
-2. **Open and Run**
-   - Open the project in VSCode.
-   - Run `pipenv install` to install dependencies.
-   - Run `pipenv shell` to open a Python shell instance.
-
----
-
-## Task 1: Define the Problem
-
-Build the following routes:
-
-- Default Route: `/`
-- Model Route: `/<model>`
-
----
-
-## Task 2: Determine the Design
-
-### App Routes:
-
-- `/`  
-  - Returns: `"Welcome to Flatiron Cars"`
-
-- `/<model>`  
-  - Takes `model` variable from the URL  
-  - Uses the `model` variable to check against an `existing_models` array  
-    - If model exists:  
-      `"Flatiron {model} is in our fleet!"`  
-    - If model doesn't exist:  
-      `"No models called {model} exists in our catalog"`
-
----
-
-## Task 3: Develop, Test, and Refine the Code
-
-1. Create a **feature branch**
-2. Build the following:
-
-### `/` Route
-
-- Returns: `"Welcome to Flatiron Cars"`
-
-### `/<model>` Route
-
-- Accepts a model name from the URL
-- Uses the model variable to check the `existing_models` array
-  - If found: return `"Flatiron {model} is in our fleet!"`
-  - If not found: return `"No models called {model} exists in our catalog"`
-
-3. Push the feature branch and open a PR on GitHub
-4. Merge into `main`
-
----
-
-## Task 4: Document and Maintain
-
-### Best Practices:
-
-- Add comments explaining logic and purpose
-- Clarify code intent for future developers
-- Include a screenshot of completed work in the README
-- Update README to reflect functionality using [https://makeareadme.com](https://makeareadme.com)
-- Delete stale GitHub branches
-- Remove unused or commented-out code
-- Update `.gitignore` to exclude sensitive data (if needed)
-
----
-
-## Submission
-
-Once all tests are passing and code is pushed to the `main` branch:
-
-- Submit your GitHub repo through **Canvas** using **CodeGrade**
-
----
-
-## Grading Criteria
-
-- Application passes all test suites
-- `/` route is created and returns correctly
-- `/<model>` route is created and returns correctly
+```bash
+python3 -m pytest -q server/testing/app_test.py
+```
