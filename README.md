@@ -93,7 +93,7 @@ Build the following routes:
 ### App Routes:
 
 - `/`  
-  - Returns: `"Welcome to Flatiron Cars"`
+  - Returns: `"Welcome to Flatiron Cars!"`
 
 - `/<model>`  
   - Takes `model` variable from the URL  
@@ -101,7 +101,7 @@ Build the following routes:
     - If model exists:  
       `"Flatiron {model} is in our fleet!"`  
     - If model doesn't exist:  
-      `"No models called {model} exists in our catalog"`
+      `"No models called {model} exists in our catalog."`
 
 ---
 
@@ -112,14 +112,14 @@ Build the following routes:
 
 ### `/` Route
 
-- Returns: `"Welcome to Flatiron Cars"`
+- Returns: `"Welcome to Flatiron Cars!"`
 
 ### `/<model>` Route
 
 - Accepts a model name from the URL
 - Uses the model variable to check the `existing_models` array
   - If found: return `"Flatiron {model} is in our fleet!"`
-  - If not found: return `"No models called {model} exists in our catalog"`
+  - If not found: return `"No models called {model} exists in our catalog."`
 
 3. Push the feature branch and open a PR on GitHub
 4. Merge into `main`
