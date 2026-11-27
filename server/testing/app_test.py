@@ -12,9 +12,9 @@ class TestApp:
         assert(response.status_code == 200)
 
     def test_index_text(self):
-        '''displays "Welcome to Flatiron Cars" in for '/' route in browser.'''
+        '''displays "Welcome to Flatiron Cars!" for '/' route in browser.'''
         response = app.test_client().get('/')
-        assert(response.data.decode() == 'Welcome to Flatiron Cars')
+        assert(response.data.decode() == 'Welcome to Flatiron Cars!')
 
     def test_model_route(self):
         '''has a resource available at "/<model>".'''
@@ -30,4 +30,4 @@ class TestApp:
         '''displays failure text of '/<model> route in browser.'''
 
         response = app.test_client().get('/realCar')
-        assert(response.data.decode() == 'No models called realCar exists in our catalog')
+        assert(response.data.decode() == 'No models called realCar exists in our catalog.')
